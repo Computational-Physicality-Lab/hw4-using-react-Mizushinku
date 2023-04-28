@@ -1,0 +1,12 @@
+.footer {
+  background-color: #c51230;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.footer-link:hover {
+  color: grey;
+}

@@ -2,6 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import appRoutes from "./shared/appRoutes";
 
 import NavBar from "./containers/Navbar/Navbar";
+import HomePage from "./containers/HomePage/HomePage";
+import Products from "./containers/Products/Products";
+import Detail from "./containers/Detail/Detail";
+import NotImplement from "./containers/NotImplement/NotImplement";
+import Footer from "./containers/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -9,8 +14,12 @@ function App() {
     <div>
       <NavBar />
       <Routes>
-        <Route exact path={appRoutes.home} />
+        <Route path={appRoutes.home} element={<HomePage />} />
+        <Route path={appRoutes.products} element={<Products />} />
+        <Route path={appRoutes.detail} element={<Detail />} />
+        <Route path={appRoutes.notImp} element={<NotImplement />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
