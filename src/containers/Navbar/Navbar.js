@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import {
   Navbar,
@@ -11,9 +11,12 @@ import {
 import appRoutes from "../../shared/appRoutes";
 import Logo from "../../assets/images/logo.png";
 import Cart from "../../assets/images/cart.png";
+import { CartContext } from "../../App.js";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const myCart = useContext(CartContext);
+
   return (
     <div>
       <div className="top-color-fill" />
@@ -26,12 +29,12 @@ const NavBar = () => {
         </NavbarText>
         <NavLink
           tag={RouterNavLink}
-          to={appRoutes.notImp}
+          to={appRoutes.shoppingCart}
           className="d-flex flex-row align-items-center cart-link"
         >
           <img src={Cart} style={{ height: "60px" }} alt="Cart" />
           <p id="cart-count" className="mx-2">
-            0
+            {myCart.cart.length}
           </p>
         </NavLink>
       </Navbar>

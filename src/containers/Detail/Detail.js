@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button, Container, Input } from "reactstrap";
 
 import shirts from "../../shared/shirts";
 import appRoutes from "../../shared/appRoutes";
+import { CartContext } from "../../App.js";
 import "./Detail.css";
 
 const Detail = () => {
   const { id } = useParams();
+
+  const myCart = useContext(CartContext);
 
   const shirt = shirts[id];
   const colors = shirt.colors;
@@ -16,6 +19,13 @@ const Detail = () => {
   const [side, setSide] = useState("front");
   const [quantity, setQuantity] = useState(1);
   const [sSize, setSSize] = useState("Size:");
+
+  const addToCart = () => {
+    myCart.setCart((prev) => {
+      prev.unshift({ id: id, quantity: quantity, color: color, sSize: sSize });
+      return prev;
+    });
+  };
 
   return (
     <Container className="my-3">
@@ -109,8 +119,9 @@ const Detail = () => {
             <Button
               tag={Link}
               to={appRoutes.shoppingCart}
-              disabled={!(shirt.price && sSize != "Size:")}
+              disabled={!(shirt.price && sSize !== "Size:")}
               className="btn_toCart mt-5 py-2"
+              onClick={() => addToCart()}
             >
               Add to Cart
             </Button>
