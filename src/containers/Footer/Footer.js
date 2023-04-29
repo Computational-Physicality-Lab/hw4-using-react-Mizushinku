@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <Container
       fluid
-      className="d-flex px-3 py-5 justify-content-between align-items-center footer"
+      className="d-flex px-5 py-5 justify-content-around align-items-center footer"
     >
       <Link className="footer-link" to={appRoutes.notImp}>
         Contact Us

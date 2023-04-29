@@ -7,7 +7,6 @@ import {
   NavItem,
   NavLink,
   NavbarText,
-  Button,
 } from "reactstrap";
 import appRoutes from "../../shared/appRoutes";
 import Logo from "../../assets/images/logo.png";

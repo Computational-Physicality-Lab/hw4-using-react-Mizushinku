@@ -1,0 +1,25 @@
+#product-top-text {
+  font-size: 4rem;
+  margin: 20px 0;
+  margin-left: 7%;
+}
+
+.product-info-container {
+  box-sizing: border-box;
+  border: 4px solid #c51230;
+  border-radius: 5px;
+}
+
+.product-info-container h3 {
+  color: #c51230;
+}
+
+.product-info-container .btn {
+  background-color: #c51230;
+  border: 5px solid #c51230;
+}
+
+.product-info-container .btn:hover {
+  background-color: darkred;
+  border-color: darkred;
+}

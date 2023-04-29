@@ -1,0 +1,20 @@
+.text-frag {
+  min-height: 200px;
+  width: 30%;
+  border: 5px solid #c51230;
+  border-radius: 10px;
+  margin: 30px 5%;
+  padding: 30px 2%;
+  padding-bottom: 20px;
+  font-family: "Catamaran";
+  word-wrap: break-word;
+}
+
+.text-frag-title {
+  font-size: 1.8rem;
+  color: #c51230;
+}
+
+.text-frag-content {
+  margin-top: 15px;
+}

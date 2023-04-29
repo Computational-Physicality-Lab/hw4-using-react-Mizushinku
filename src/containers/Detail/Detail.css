@@ -1,0 +1,30 @@
+.btn-side {
+  background-color: #c51230 !important;
+  border: 2px solid #c51230 !important;
+}
+
+.btn-side:hover,
+.btn-color:hover {
+  transform: scale(1.1);
+}
+
+.select-quantity {
+  min-width: 80px !important;
+  max-width: 20% !important;
+}
+
+.select-size {
+  min-width: 150px !important;
+  max-width: 35% !important;
+}
+
+.btn_toCart {
+  min-width: 120px !important;
+  max-width: 35% !important;
+  background-color: #c51230 !important;
+  border: 2px solid #c51230 !important;
+}
+
+.btn_toCart:hover {
+  transform: scale(1.1);
+}

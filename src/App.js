@@ -5,6 +5,7 @@ import NavBar from "./containers/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import Products from "./containers/Products/Products";
 import Detail from "./containers/Detail/Detail";
+import ShoppingCart from "./containers/ShoppingCart/ShoppingCart";
 import NotImplement from "./containers/NotImplement/NotImplement";
 import Footer from "./containers/Footer/Footer";
 import "./App.css";
@@ -17,6 +18,7 @@ function App() {
         <Route path={appRoutes.home} element={<HomePage />} />
         <Route path={appRoutes.products} element={<Products />} />
         <Route path={appRoutes.detail} element={<Detail />} />
+        <Route path={appRoutes.shoppingCart} element={<ShoppingCart />} />
         <Route path={appRoutes.notImp} element={<NotImplement />} />
       </Routes>
       <Footer />
