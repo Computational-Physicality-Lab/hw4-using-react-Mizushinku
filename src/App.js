@@ -17,33 +17,17 @@ function App() {
   const [cart, setCart] = useState([]);
 
   return (
-    <div>
-      <CartContext.Provider value={{ cart: cart, setCart: setCart }}>
-        <NavBar />
-      </CartContext.Provider>
+    <CartContext.Provider value={{ cart: cart, setCart: setCart }}>
+      <NavBar />
       <Routes>
         <Route path={appRoutes.home} element={<HomePage />} />
         <Route path={appRoutes.products} element={<Products />} />
-        <Route
-          path={appRoutes.detail}
-          element={
-            <CartContext.Provider value={{ cart: cart, setCart: setCart }}>
-              <Detail />
-            </CartContext.Provider>
-          }
-        />
-        <Route
-          path={appRoutes.shoppingCart}
-          element={
-            <CartContext.Provider value={{ cart: cart, setCart: setCart }}>
-              <ShoppingCart />
-            </CartContext.Provider>
-          }
-        />
+        <Route path={appRoutes.detail} element={<Detail />} />
+        <Route path={appRoutes.shoppingCart} element={<ShoppingCart />} />
         <Route path={appRoutes.notImp} element={<NotImplement />} />
       </Routes>
       <Footer />
-    </div>
+    </CartContext.Provider>
   );
 }
 

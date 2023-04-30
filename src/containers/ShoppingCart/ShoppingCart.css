@@ -1,0 +1,20 @@
+#order-summary {
+  border: 2px solid #c51230;
+  border-radius: 10px;
+}
+
+#total-price {
+  color: #c51230;
+  border-top: 2px solid #c51230;
+}
+
+#btn_checkout,
+#btn_contiuneShopping {
+  background-color: #c51230 !important;
+  border: 2px solid #c51230 !important;
+}
+
+#btn_checkout:hover,
+#btn_contiuneShopping:hover {
+  transform: scale(1.1);
+}

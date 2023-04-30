@@ -34,7 +34,9 @@ const NavBar = () => {
         >
           <img src={Cart} style={{ height: "60px" }} alt="Cart" />
           <p id="cart-count" className="mx-2">
-            {myCart.cart.length}
+            {myCart.cart
+              .map((item) => item.quantity)
+              .reduce((n, q) => n + q, 0)}
           </p>
         </NavLink>
       </Navbar>

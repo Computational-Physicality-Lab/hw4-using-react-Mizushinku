@@ -1,0 +1,16 @@
+.cart-item {
+  border-top: 2px solid #c51230;
+}
+
+.cart-item img {
+  width: 40%;
+}
+
+#btn_rm {
+  background-color: #c51230 !important;
+  border: 2px solid #c51230 !important;
+}
+
+#btn_rm:hover {
+  transform: scale(1.1);
+}

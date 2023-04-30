@@ -22,7 +22,11 @@ const Detail = () => {
 
   const addToCart = () => {
     myCart.setCart((prev) => {
-      prev.unshift({ id: id, quantity: quantity, color: color, sSize: sSize });
+      // prev.unshift();
+      prev = [
+        { id: id, quantity: quantity, color: color, sSize: sSize },
+        ...prev,
+      ];
       return prev;
     });
   };
@@ -86,7 +90,7 @@ const Detail = () => {
                 type="select"
                 className="select-quantity ms-3"
                 onChange={(e) => {
-                  setQuantity(e.target.value);
+                  setQuantity(parseInt(e.target.value, 10));
                 }}
               >
                 {[...Array(20).keys()].map((q) => {
